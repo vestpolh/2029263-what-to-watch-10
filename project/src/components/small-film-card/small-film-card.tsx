@@ -1,7 +1,6 @@
-import { Article } from '../../types/article';
+import { Film } from '../../types/film';
 
-
-function ArticleLink(article: Article): JSX.Element {
+function SmallFilmCard(article: Film): JSX.Element {
   return (
     <article className="small-film-card catalog__films-card">
       <div className="small-film-card__image">
@@ -14,4 +13,4 @@ function ArticleLink(article: Article): JSX.Element {
   );
 }
 
-export default ArticleLink;
+export default SmallFilmCard;
