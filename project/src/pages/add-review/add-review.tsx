@@ -23,7 +23,7 @@ function AddReview(props: {film: Film, rating: number}): JSX.Element {
                 <a href='film-page.html' className='breadcrumbs__link'>{film.title}</a>
               </li>
               <li className='breadcrumbs__item'>
-                <a className='breadcrumbs__link'>Add review</a>
+                <a className='breadcrumbs__link' href='#'>Add review</a>
               </li>
             </ul>
           </nav>

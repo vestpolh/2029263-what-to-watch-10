@@ -1,4 +1,4 @@
-import { FilmRating } from "./film-rating";
+import { FilmRating } from './film-rating';
 
 export type Film = {
   title: string,
