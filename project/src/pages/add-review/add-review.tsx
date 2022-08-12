@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
 import { Film } from '../../types/film';
@@ -15,15 +16,15 @@ function AddReview(props: {film: Film, rating: number}): JSX.Element {
         <h1 className='visually-hidden'>WTW</h1>
 
         <header className='page-header'>
-          <Logo href='main.html'/>
+          <Logo href='/'/>
 
           <nav className='breadcrumbs'>
             <ul className='breadcrumbs__list'>
               <li className='breadcrumbs__item'>
-                <a href='film-page.html' className='breadcrumbs__link'>{film.title}</a>
+                <Link to={`film/${film.title}`} className='breadcrumbs__link'>{film.title}</Link>
               </li>
               <li className='breadcrumbs__item'>
-                <a className='breadcrumbs__link' href='#'>Add review</a>
+                <a className='breadcrumbs__link' href='/'>Add review</a>
               </li>
             </ul>
           </nav>

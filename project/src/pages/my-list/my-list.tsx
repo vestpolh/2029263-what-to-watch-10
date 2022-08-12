@@ -9,7 +9,7 @@ function myList(props: {films: Film[]}): JSX.Element {
   return (
     <div className='user-page'>
       <header className='page-header user-page__head'>
-        <Logo href='main.html'/>
+        <Logo href='/'/>
 
         <h1 className='page-title user-page__title'>My list <span className='user-page__film-count'>{props.films.length}</span></h1>
         <UserBlock/>

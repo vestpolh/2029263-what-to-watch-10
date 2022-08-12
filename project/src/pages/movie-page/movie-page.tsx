@@ -4,7 +4,7 @@ import SmallFilmCard from '../../components/small-film-card/small-film-card';
 import UserBlock from '../../components/user-block/user-block';
 import { Film } from '../../types/film';
 
-function MoviewPage(props: {film: Film, myListCount: number}): JSX.Element{
+function MoviePage(props: {film: Film, myListCount: number}): JSX.Element{
   const {film, myListCount} = props;
   return(
     <>
@@ -17,7 +17,7 @@ function MoviewPage(props: {film: Film, myListCount: number}): JSX.Element{
           <h1 className='visually-hidden'>WTW</h1>
 
           <header className='page-header film-card__head'>
-            <Logo href='main.html' />
+            <Logo href='/' />
             <UserBlock />
           </header>
 
@@ -59,13 +59,13 @@ function MoviewPage(props: {film: Film, myListCount: number}): JSX.Element{
               <nav className='film-nav film-card__nav'>
                 <ul className='film-nav__list'>
                   <li className='film-nav__item film-nav__item--active'>
-                    <a href='#' className='film-nav__link'>Overview</a>
+                    <a href='/' className='film-nav__link'>Overview</a>
                   </li>
                   <li className='film-nav__item'>
-                    <a href='#' className='film-nav__link'>Details</a>
+                    <a href='/' className='film-nav__link'>Details</a>
                   </li>
                   <li className='film-nav__item'>
-                    <a href='#' className='film-nav__link'>Reviews</a>
+                    <a href='/' className='film-nav__link'>Reviews</a>
                   </li>
                 </ul>
               </nav>
@@ -102,4 +102,4 @@ function MoviewPage(props: {film: Film, myListCount: number}): JSX.Element{
   );
 }
 
-export default MoviewPage;
+export default MoviePage;

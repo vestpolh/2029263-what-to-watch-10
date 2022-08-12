@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import { Film } from '../../types/film';
 
-function SmallFilmCard(article: Film): JSX.Element {
+function SmallFilmCard(film: Film): JSX.Element {
   return (
-    <article className="small-film-card catalog__films-card">
-      <div className="small-film-card__image">
-        <img src={article.src} alt={article.title} width="280" height="175" />
+    <article className='small-film-card catalog__films-card'>
+      <div className='small-film-card__image'>
+        <img src={film.src} alt={film.title} width='280' height='175' />
       </div>
-      <h3 className="small-film-card__title">
-        <a className="small-film-card__link" href="film-page.html">{article.title}</a>
+      <h3 className='small-film-card__title'>
+        <Link className='small-film-card__link' to={`/film/${film.title}`}>{film.title}</Link>
       </h3>
     </article>
   );
