@@ -83,25 +83,26 @@ function App(): JSX.Element {
 
   const myListCount = 9;
 
-  //return <p>Hello, world!</p>;
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={AppRoute.Main} element={<Main {...{genres, promoFilm, films, myListCount}}/>}/>
-        <Route path={AppRoute.SignIn} element={<SignIn/>}/>
-        <Route path={AppRoute.MyList} element={
-          <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
-            <MyList {...{films: films.slice(0, myListCount)}}/>
-          </PrivateRoute>
-        }
-        />
-        <Route path={AppRoute.Film} element={<MoviePage {...{film, myListCount}}/>}/>
-        <Route path={AppRoute.AddReview} element={<AddReview {...{film: promoFilm, rating: 8}}/>}/>
-        <Route path={AppRoute.Player} element={<Player/>}/>
-        <Route path='*' element={<PageNotFound/>}/>
-      </Routes>
-    </BrowserRouter>
-  );
+  return <Main {...{genres, promoFilm, films, myListCount}}/>;
+
+  // return (
+  //   <BrowserRouter>
+  //     <Routes>
+  //       <Route path={AppRoute.Main} element={<Main {...{genres, promoFilm, films, myListCount}}/>}/>
+  //       <Route path={AppRoute.SignIn} element={<SignIn/>}/>
+  //       <Route path={AppRoute.MyList} element={
+  //         <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+  //           <MyList {...{films: films.slice(0, myListCount)}}/>
+  //         </PrivateRoute>
+  //       }
+  //       />
+  //       <Route path={AppRoute.Film} element={<MoviePage {...{film, myListCount}}/>}/>
+  //       <Route path={AppRoute.AddReview} element={<AddReview {...{film: promoFilm, rating: 8}}/>}/>
+  //       <Route path={AppRoute.Player} element={<Player/>}/>
+  //       <Route path='*' element={<PageNotFound/>}/>
+  //     </Routes>
+  //   </BrowserRouter>
+  // );
 }
 
 export default App;
