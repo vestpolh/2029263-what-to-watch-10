@@ -83,7 +83,6 @@ function App(): JSX.Element {
 
   const myListCount = 9;
 
-  //return <p>Hello, world!</p>;
   return (
     <BrowserRouter>
       <Routes>
