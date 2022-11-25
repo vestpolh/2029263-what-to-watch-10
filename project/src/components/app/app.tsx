@@ -10,7 +10,8 @@ import { Film } from '../../types/film';
 import { Genre } from '../../types/genre';
 import { AppRoute, AuthorizationStatus } from '../../consts';
 import PrivateRoute from '../private-route/private-route';
-import Test from '../test/test';
+//import Test from '../test/test';
+import TestPage from '../../pages/test-page/test-page';
 
 function App(props: {films: Film[]}): JSX.Element {
 
@@ -53,7 +54,7 @@ function App(props: {films: Film[]}): JSX.Element {
         <Route path={AppRoute.Film} element={<MoviePage {...{films, myListCount}}/>}/>
         <Route path={AppRoute.AddReview} element={<AddReview {...{films}}/>}/>
         <Route path={AppRoute.Player} element={<Player/>}/>
-        <Route path='/test' element={<Test/>}/>
+        <Route path='/test' element={<TestPage/>}/>
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
     </BrowserRouter>
