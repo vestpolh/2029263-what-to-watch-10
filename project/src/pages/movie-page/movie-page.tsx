@@ -1,11 +1,16 @@
+import { Link, useParams } from 'react-router-dom';
 import Footer from '../../components/footer/footer';
 import Logo from '../../components/logo/logo';
 import SmallFilmCard from '../../components/small-film-card/small-film-card';
 import UserBlock from '../../components/user-block/user-block';
 import { Film } from '../../types/film';
 
-function MoviePage(props: {film: Film, myListCount: number}): JSX.Element{
-  const {film, myListCount} = props;
+function MoviePage(props: {films: Film[], myListCount: number}): JSX.Element{
+  const {films, myListCount} = props;
+  const {id} = useParams();
+  // /* eslint-disable no-console */
+  // console.log(params);
+  const film = films.find((f) => f.title === id) || ({} as Film);
   return(
     <>
       <section className='film-card film-card--full'>
@@ -43,7 +48,7 @@ function MoviePage(props: {film: Film, myListCount: number}): JSX.Element{
                   <span>My list</span>
                   <span className='film-card__count'>{myListCount}</span>
                 </button>
-                <a href='add-review.html' className='btn film-card__button'>Add review</a>
+                <Link className='btn film-card__button' to={`/film/${film.title}/review`}>Add review</Link>
               </div>
             </div>
           </div>

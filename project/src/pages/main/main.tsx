@@ -1,7 +1,7 @@
 import FilmCard from '../../components/film-card/film-card';
+import FilmList from '../../components/film-list/film-list';
 import Footer from '../../components/footer/footer';
 import GenreLink from '../../components/genre-link/genre-link';
-import SmallFilmCard from '../../components/small-film-card/small-film-card';
 import { Film } from '../../types/film';
 import { Genre } from '../../types/genre';
 
@@ -22,9 +22,7 @@ function Main(props: {genres: Genre[], films: Film[], promoFilm: Film, myListCou
 
           </ul>
 
-          <div className="catalog__films-list">
-            {films.map((f)=><SmallFilmCard {...f} key={f.title}/>)}
-          </div>
+          <FilmList {...{films}}/>
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>

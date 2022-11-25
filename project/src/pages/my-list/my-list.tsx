@@ -4,7 +4,7 @@ import SmallFilmCard from '../../components/small-film-card/small-film-card';
 import UserBlock from '../../components/user-block/user-block';
 import { Film } from '../../types/film';
 
-function myList(props: {films: Film[]}): JSX.Element {
+function MyList(props: {films: Film[]}): JSX.Element {
   //console.log(props.films);
   return (
     <div className='user-page'>
@@ -28,4 +28,4 @@ function myList(props: {films: Film[]}): JSX.Element {
   );
 }
 
-export default myList;
+export default MyList;
