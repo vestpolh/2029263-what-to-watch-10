@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 
 function Details(d: {fn: string, ln: string, mn: string, c: string}){
